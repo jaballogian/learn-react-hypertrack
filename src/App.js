@@ -8,7 +8,7 @@ import "./App.css";
 
 function App(){
   const PUBLISHABLE_KEY = "Zw37TcBJ2zVBrOm7eEFXq3hGkebNierEYtHhq_2g9BVQy3Yi72Ijj9ji6Juy6nmZX7igdRm1YdGgGPLJOzyrBw"
-  
+
   const [tooltip, setTooltip] = useState(true)
   const [deviceList, setDeviceList] = useState(true)
   const [deviceCard, setDeviceCard] = useState(true)
@@ -91,11 +91,13 @@ function App(){
     setCode(code)
   }
 
-  const { Content } = Layout;
-  const { Option } = Select;
-  const { Title } = Typography;
+  const { Content } = Layout
+  const { Option } = Select
+  const { Title } = Typography
 
-  const layerOptions = ["base", "street", "satellite", "custom"];
+  const layerOptions = ["base", "street", "satellite", "custom"]
+
+  console.log("code", code)
 
   return(
     <div className="App">
@@ -123,7 +125,7 @@ function App(){
                     }
                   />
                 )}
-                {publishableKey !== "" && (
+                {/* {publishableKey !== "" && (
                   <LiveView
                     publishableKey={publishableKey}
                     showTooltips={tooltip}
@@ -134,7 +136,7 @@ function App(){
                     className="liveView"
                     assetsUrl={assetsUrl}
                   />
-                )}
+                )} */}
               </Col>
             </Row>
             <Row style={{ padding: "25px" }}>
